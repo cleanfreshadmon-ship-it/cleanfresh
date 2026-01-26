@@ -1,118 +1,323 @@
 <!DOCTYPE html>
 <html lang="es">
-  
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clean & Fresh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{margin:0;font-family:Arial;background:#f7f7f7}
-header{background:#0fb9b1;color:white;padding:50px;text-align:center}
-section{padding:40px;max-width:900px;margin:auto}
-h2{color:#0fb9b1}
-.card{background:white;padding:20px;margin:15px 0;border-radius:8px}
-button{background:#0fb9b1;color:white;border:none;padding:12px 20px;border-radius:5px}
-footer{text-align:center;background:#222;color:white;padding:20px}
+  <title>Clean & Fresh S.A.S | Servicios Profesionales de Aseo</title>
+	<link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="Servicios profesionales de aseo, desinfección y mantenimiento en Armenia y el Quindío.">
 
-input,textarea{width:100%;padding:10px;margin:8px 0}
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
-color:white;
-font-size:22px;
-text-decoration:none;
-}
-</style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== GLOBAL ===== */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #1abc9c;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      color: #1abc9c;
+      font-size: 1.4rem;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 85vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      margin: 15px 0;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 60px 0;
+      background: #f7f7f7;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      padding: 60px 0;
+    }
+
+    .about-text {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .values {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      text-align: center;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      padding: 60px 0;
+      background: #f7f7f7;
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .menu {
+        gap: 10px;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<img src="logo.png" width="150"><br>
-<h1>Clean & Fresh</h1>
-<p>Aseo profesional para tu espacio</p>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <h1 class="logo">Clean & Fresh</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+	  <li><a href="#nosotros">Nosotros</a></li>   
+	  <li><a href="#mision-vision">Nuestra Misión & Visión</a></li>       
+	  <li><a href="#servicios">Servicios</a></li>
+	  <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section>
+  <main>
 
-<div class="card">
-<h2>¿Quiénes somos?</h2>
-<p>Empresa especializada en limpieza, desinfección y mantenimiento de áreas comunes, brindando bienestar, higiene e imagen positiva a su conjunto.</p>
-</div>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div>
+        <h2>Servicios Profesionales de Aseo</h2>
+        <p>Limpieza, desinfección y mantenimiento con personal capacitado</p>
+        <a href="#contacto" class="btn">Solicita tu cotización</a>
+      </div>
+    </section>
 
-<div class="card">
-<h2>Mision</h2>
-<p>Posicionarnos en el año 2028 como una empresa de calidad y reconocida a  nivel nacional, 
-  brindar servicios integrales de aseo y mantenimiento con altos estándares de calidad,
-  enfocados en la satisfacción del cliente, la generación de empleo digno y el bienestar de las comunidades,
-  consolidando a Clean & Fresh como una empresa confiable y competitiva en el mercado</p>
-</div>
+<section id="nosotros" class="about">
+      <div class="container">
+        <h2 class="section-title">Quiénes Somos</h2>
+        <p class="about-text">
+         Clean & Fresh S.A.S es una empresa comprometida con el cuidado y la limpieza de los espacios, 
+dedicada a ofrecer servicios integrales de aseo y mantenimiento con altos estándares de calidad. 
+Nos caracterizamos por la responsabilidad, el cumplimiento y la atención al detalle,
+ brindando soluciones eficientes y confiables que generan bienestar, confianza y tranquilidad a nuestros clientes. Contamos con:
+        </p>
 
-<div class="card">
-<h2>Servicios</h2>
-<ul>
-<li>Limpieza áreas comunes</li>
-<li>Desinfección</li>
-<li>Aseo piscinas</li>
-<li>Manejo de residuos</li>
-<li>Lavado de tanques</li>
-<li>Suministro de insumos</li>
-</ul>
-</div>
+        <div class="values">
+          <div>✔ Personal capacitado</div>
+          <div>✔ Supervisión constante</div>
+          <div>✔ Cumplimiento legal</div>
+          <div>✔ Atención personalizada</div>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h2>¿Por qué elegirnos?</h2>
-<ul>
-<li>Personal capacitado</li>
-<li>Supervisión constante</li>
-<li>Cumplimiento legal</li>
-<li>Horarios flexibles</li>
-<li>Precios competitivos</li>
-</ul>
-</div>
+<!-- MISION -->
+    <section id="mision-vision" class="services">
+      <div class="container">
+        <h2 class="section-title">Nuestra Misión & Visión</h2>
 
-<div class="card">
-<h2>Contacto</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Mision</h3>
+            <p>Posicionarnos en el año 2028 como una empresa de calidad y reconocida a nivel nacional, 
+brindar servicios integrales de aseo y mantenimiento con altos estándares de calidad, 
+enfocados en la satisfacción del cliente, la generación de empleo digno y el bienestar de las comunidades, 
+consolidando a Clean & Fresh como una empresa confiable y competitiva en el mercado</p>
+          </div>
 
-<form name="contacto" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="contacto">
+          <div class="service-card">
+            <h3>Visión</h3>
+            <p>Ser una empresa líder en el sector de aseo y mantenimiento, 
+reconocida por la excelencia en nuestros servicios, 
+el compromiso con la calidad y la innovación constante. 
+Aspiramos a brindar soluciones eficientes y sostenibles que superen las expectativas de nuestros clientes, 
+contribuyendo al bienestar,
+ la armonía y la buena imagen de cada espacio que cuidamos.</p>
+          </div>
 
-<input name="nombre" placeholder="Nombre" required>
-<input name="telefono" placeholder="Teléfono" required>
-<textarea name="mensaje" placeholder="Mensaje"></textarea>
+          
+         
+        </div>
+      </div>
+    </section>
 
-<button type="submit">Enviar mensaje</button>
-</form>
 
-<p>📞 315 024 0704</p>
-<p>📧 cleanfreshadmon@gmail.com</p>
-<p>📍 Armenia, Quindío</p>
+    <!-- SERVICES -->
+    <section id="servicios" class="services">
+      <div class="container">
+        <h2 class="section-title">Nuestros Servicios</h2>
 
-</div>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Limpiamos tu espacio</h3>
+            <p>🏠 Hogar 🏢 Oficinas y empresas 🏘️ Conjuntos residenciales 
+🌿 Zonas verdes 💧 Zonas húmedas 🏢 Fachadas.</p>
+          </div>
 
-</section>
+          <div class="service-card">
+            <h3>Servicios a través de aliados certificados</h3>
+            <p>🧯 Recarga, mantenimiento y certificación de extintores
+🐜 Fumigación y control de plagas</p>
+          </div>
 
-<footer>
-© Clean & Fresh 2026
-</footer>
+          <div class="service-card">
+            <h3>Lavado de Tanques</h3>
+            <p>Servicio de lavado y desinfección de tanques de almacenamiento de agua potable, 
+realizado bajo estrictos protocolos de higiene y seguridad, cumpliendo con la Resolución 2115 de 2007 y demás normas vigentes. 
+Garantizamos la correcta limpieza, desinfección y conservación del agua,
+ protegiendo la salud y el bienestar de los usuarios..</p>
+          </div>
 
-<a class="whatsapp" href="https://wa.me/573150240704" img src="whatsapp.png" width="25"></a>
+          <div class="service-card">
+            <h3>Suministro de Insumos</h3>
+            <p>Proveemos productos, equipos y elementos de aseo de alta calidad para hogares, 
+conjuntos residenciales, oficinas, locales comerciales y empresas,
+ garantizando insumos eficientes, seguros y adecuados para el mantenimiento óptimo de todo tipo de espacios.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    
+
+    <!-- CONTACT -->
+    <section id="contacto" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contáctanos</h2>
+
+        <div class="contact-info">
+          <p>📍 Armenia, Quindío</p>
+          <p>📞 315 024 0704</p>
+	<p>📧 cleanfreshadmon@gmail.com</p>
+     </div>
+
+        <a href="https://wa.me/573150240704" class="btn">WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Clean & Fresh S.A.S · Todos los derechos reservados</p>
+  </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
