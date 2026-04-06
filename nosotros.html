@@ -4,175 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nosotros | Clean & Fresh</title>
-
-   <style>
-    /* ===== RESET ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* ===== GLOBAL ===== */
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 30px;
-      background: #1abc9c;
-      color: #fff;
-      border-radius: 30px;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-
-    /* ===== HEADER ===== */
-    .header {
-      background: #fff;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 70px;
-    }
-
-    .logo {
-      color: #1abc9c;
-      font-size: 1.4rem;
-    }
-
-    .menu {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      height: 85vh;
-      background:
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-    }
-
-    .hero p {
-      margin: 15px 0;
-    }
-
-    /* ===== SERVICES ===== */
-    .services {
-      padding: 60px 0;
-      background: #f7f7f7;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .service-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-    }
-
-    /* ===== ABOUT ===== */
-    .about {
-      padding: 60px 0;
-    }
-
-    .about-text {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .values {
-      margin-top: 30px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-      text-align: center;
-    }
-
-    /* ===== CONTACT ===== */
-    .contact {
-      padding: 60px 0;
-      background: #f7f7f7;
-      text-align: center;
-    }
-
-    .contact-info p {
-      margin-bottom: 10px;
-    }
-
-    /* ===== FOOTER ===== */
-    .footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-    }
-
-    /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
-      .menu {
-        gap: 10px;
-      }
-
-      .hero h2 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+<script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+  
 
 </head>
 
@@ -193,60 +31,75 @@
   </div>
 </header>
 
-<!-- CONTENIDO -->
-<section class="about" style="margin-top:100px;">
-  <div class="container">
-    <h2 class="section-title">Quiénes Somos</h2>
-
-    <p class="about-text">
-      Clean & Fresh S.A.S es una empresa comprometida con el cuidado y la limpieza de los espacios,
-      dedicada a ofrecer servicios integrales de aseo y mantenimiento con altos estándares de calidad.
-      Nos caracterizamos por la responsabilidad, el cumplimiento y la atención al detalle,
-      brindando soluciones eficientes y confiables que generan bienestar, confianza y tranquilidad.
-    </p>
-
-    <div class="values">
-      <div>✔ Personal capacitado</div>
-      <div>✔ Supervisión constante</div>
-      <div>✔ Cumplimiento legal</div>
-      <div>✔ Atención personalizada</div>
-    </div>  
-  </div>
-</section>
-
-  <!-- MISION -->
-    <section id="mision-vision" class="services">
-      <div class="container">
-        <h2 class="section-title">Nuestra Misión & Visión</h2>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Mision</h3>
-            <p>Posicionarnos en el año 2028 como una empresa de calidad y reconocida a nivel nacional, 
-brindar servicios integrales de aseo y mantenimiento con altos estándares de calidad, 
-enfocados en la satisfacción del cliente, la generación de empleo digno y el bienestar de las comunidades, 
-consolidando a Clean & Fresh como una empresa confiable y competitiva en el mercado</p>
-          </div>
-
-          <div class="service-card">
-            <h3>Visión</h3>
-            <p>Ser una empresa líder en el sector de aseo y mantenimiento, 
-reconocida por la excelencia en nuestros servicios, 
-el compromiso con la calidad y la innovación constante. 
-Aspiramos a brindar soluciones eficientes y sostenibles que superen las expectativas de nuestros clientes, 
-contribuyendo al bienestar,
- la armonía y la buena imagen de cada espacio que cuidamos.</p>
-          </div>
-
-          
-         
+<header class="bg-slate-900 py-20 px-8 text-center text-white">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Comprometidos con tu Bienestar</h1>
+            <p class="text-xl text-slate-300 leading-relaxed">
+                En Clean & Fresh S.A.S transformamos espacios para generar confianza y tranquilidad a través de la excelencia en el servicio.
+            </p>
         </div>
-      </div>
+    </header>
+
+    <section class="py-20 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div>
+            <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Nuestra Esencia</span>
+            <h2 class="text-3xl font-bold mt-4 mb-6 text-slate-900">¿Quiénes Somos?</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                Somos una empresa dedicada a ofrecer servicios integrales de aseo y mantenimiento con los más altos estándares de calidad. Nos caracterizamos por la responsabilidad, el cumplimiento y una atención al detalle que marca la diferencia.
+            </p>
+            <ul class="space-y-4">
+                <li class="flex items-center text-slate-700"><i class="fas fa-check-circle text-green-500 mr-3"></i> Personal altamente capacitado y confiable.</li>
+                <li class="flex items-center text-slate-700"><i class="fas fa-check-circle text-green-500 mr-3"></i> Supervisión constante en sitio.</li>
+                <li class="flex items-center text-slate-700"><i class="fas fa-check-circle text-green-500 mr-3"></i> Cumplimiento estricto de la normativa legal.</li>
+                <li class="flex items-center text-slate-700"><i class="fas fa-check-circle text-green-500 mr-3"></i> Atención personalizada y soluciones a medida.</li>
+            </ul>
+        </div>
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1603712725038-e93ba4bf5f3e?auto=format&fit=crop&q=80&w=800" alt="Equipo Clean Fresh" class="rounded-2xl shadow-2xl">
+            <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg hidden md:block">
+                <p class="text-blue-600 font-bold text-3xl">7+</p>
+                <p class="text-slate-500 text-sm italic">Años de experiencia</p>
+            </div>
+        </div>
     </section>
 
-<footer class="footer">
-  <p>© 2026 Clean & Fresh S.A.S</p>
-</footer>
+    <section class="bg-slate-50 py-20 px-8">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-100">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Misión</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Brindar servicios integrales de aseo y mantenimiento con altos estándares de calidad, enfocados en la satisfacción del cliente, la generación de empleo digno y el bienestar de las comunidades, consolidándonos como una empresa confiable y competitiva.
+                </p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-100">
+                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-6 text-xl">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Visión 2028</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Posicionarnos como líderes regionales y nacionales, reconocidos por la excelencia, innovación constante y compromiso con la sostenibilidad, contribuyendo a la buena imagen y armonía de cada espacio que cuidamos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 px-8 bg-white border-t border-slate-200">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-8">Contáctanos</h2>
+            <div class="mb-10 space-y-4 text-slate-600">
+                <p><i class="fas fa-map-marker-alt text-red-500 mr-2"></i> Armenia, Quindío</p>
+                <p><i class="fas fa-phone text-green-600 mr-2"></i> 315 024 0704</p>
+                <p><i class="fas fa-envelope text-blue-500 mr-2"></i> cleanfreshadmon@gmail.com</p>
+            </div>
+            <a href="https://wa.me/573150240704" class="inline-flex items-center bg-[#00a8e8] text-white px-10 py-4 rounded-full font-bold shadow-lg hover:bg-blue-500 transition">
+                <i class="fab fa-whatsapp mr-3 text-xl"></i> Hablar con un Experto
+            </a>
+            <p class="mt-12 text-sm text-slate-400">© 2026 Clean & Fresh S.A.S · Todos los derechos reservados</p>
+        </div>
+    </footer>
 
 </body>
 </html>
