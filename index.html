@@ -22,16 +22,22 @@
 
 <body>
 
- <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div class="text-2xl font-bold text-blue-600">CLEAN<span class="text-gray-500">FRESH</span></div>
-        <div class="hidden md:flex space-x-8 font-medium">
-    	<a href="index">Inicio</a>
-	  <a href="nosotros">Nosotros</a>   
-	  <a href="#servicios">Servicios</a>
-	  <a href="contactanos">Contacto</a>
-      </div>
-   <!--     <a href="https://wa.me/tu-numero" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Cotizar Ahora</a> -->
-    </nav>
+<nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto relative">
+    <a href="index" class="text-2xl font-bold text-blue-600">CLEAN<span class="text-green-500">FRESH</span></a>
+    
+    <button id="menu-btn" class="md:hidden text-2xl text-slate-600 focus:outline-none">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="menu" class="hidden absolute top-20 left-0 w-full bg-white shadow-xl p-8 flex-col space-y-4 md:static md:shadow-none md:p-0 md:w-auto md:flex md:flex-row md:space-y-0 md:space-x-8 font-medium z-50">
+        <a href="index" class="hover:text-blue-600 transition border-b md:border-none pb-2 md:pb-0">Inicio</a>
+        <a href="nosotros" class="hover:text-blue-600 transition border-b md:border-none pb-2 md:pb-0">Nosotros</a>
+        <a href="contacto" class="hover:text-blue-600 transition">Contacto</a>
+        <a href="https://wa.me/573150240704" class="md:hidden bg-blue-600 text-white px-6 py-3 rounded-full text-center font-bold">Cotizar Ahora</a>
+    </div>
+
+   
+</nav>
 
   <main>
 
