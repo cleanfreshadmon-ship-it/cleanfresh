@@ -189,26 +189,21 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-content">
-     <div class="text-2xl font-bold text-blue-600">CLEAN<span class="text-green-500">FRESH</span></div>
-		<!-- <h1 class="logo">Clean & Fresh</h1> -->
-      <nav>
-        <ul class="menu">
+ <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+        <div class="text-2xl font-bold text-blue-600">CLEAN<span class="text-green-500">FRESH</span></div>
+        <div class="hidden md:flex space-x-8 font-medium">
           <li><a href="#inicio">Inicio</a></li>
 	  <li><a href="nosotros.html">Nosotros</a></li>   
 	  <li><a href="#mision-vision">Nuestra Misión & Visión</a></li>       
 	  <li><a href="#servicios">Servicios</a></li>
 	  <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      </div>
+   <!--     <a href="https://wa.me/tu-numero" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Cotizar Ahora</a> -->
+    </nav>
 
   <main>
 
-    <!-- HERO -->
+    <!-- HERO
     <section id="inicio" class="hero">
       <div>
         <h1>Espacios Impecables, Entornos Saludables</h1>
@@ -216,7 +211,28 @@
         <a href="#contacto" class="btn">Cotiza tu servicio hoy</a>
       </div>
     </section>
+-->
 
+	  <header class="relative bg-slate-50 py-20 px-8">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">Expertos en Desinfección</span>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mt-4">
+                    Espacios impecables, <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">entornos saludables.</span>
+                </h1>
+                <p class="text-lg text-slate-600 mt-6 max-w-lg leading-relaxed">
+                    Elevamos el estándar de limpieza corporativa y residencial en Colombia. Tecnología avanzada para proteger lo que más importa.
+                </p>
+                <div class="mt-10 flex space-x-4">
+                    <button class="bg-slate-900 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 shadow-lg">Ver Servicios</button>
+                    <button class="border border-slate-300 px-8 py-4 rounded-lg font-bold hover:bg-white">Saber Más</button>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695ce6958?auto=format&fit=crop&q=80&w=800" alt="Limpieza Profesional" class="rounded-2xl shadow-2xl">
+            </div>
+        </div>
+    </header>
 
         <div class="values">
           <div>✔ Personal capacitado</div>
@@ -235,7 +251,7 @@
                 <div class="bg-slate-800 p-8 rounded-xl hover:bg-slate-700 transition border border-slate-700 cursor-pointer">
                     <i class="fas fa-building text-3xl text-blue-400 mb-6"></i>
                     <h4 class="text-xl font-bold mb-2">Aseo Integral</h4>
-                    <p class="text-slate-400 text-sm">Mantenimiento profesional para oficinas y locales comerciales.</p>
+                    <p class="text-slate-400 text-sm">Mantenimiento profesional para tu hogar, oficinas, cojunto residenciales y locales comerciales.</p>
                 </div>
                 <div class="bg-slate-800 p-8 rounded-xl hover:bg-slate-700 transition border border-slate-700 cursor-pointer">
                     <i class="fas fa-faucet text-3xl text-green-400 mb-6"></i>
@@ -258,44 +274,7 @@
 	  
 
 
-    <!-- SERVICES -->
-    <section id="servicios" class="services">
-      <div class="container">
-        <h2 class="section-title">Nuestros Servicios</h2>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Limpiamos tu espacio</h3>
-            <p>🏠 Hogar 🏢 Oficinas y empresas 🏘️ Conjuntos residenciales 
-🌿 Zonas verdes 💧 Zonas húmedas 🏢 Fachadas.</p>
-          </div>
-
-          <div class="service-card">
-            <h3>Servicios a través de aliados certificados</h3>
-            <p>🧯 Recarga, mantenimiento y certificación de extintores
-🐜 Fumigación y control de plagas</p>
-          </div>
-
-          <div class="service-card">
-            <h3>Lavado de Tanques</h3>
-            <p>Servicio de lavado y desinfección de tanques de almacenamiento de agua potable, 
-realizado bajo estrictos protocolos de higiene y seguridad, cumpliendo con la Resolución 2115 de 2007 y demás normas vigentes. 
-Garantizamos la correcta limpieza, desinfección y conservación del agua,
- protegiendo la salud y el bienestar de los usuarios..</p>
-          </div>
-
-          <div class="service-card">
-            <h3>Suministro de Insumos</h3>
-            <p>Proveemos productos, equipos y elementos de aseo de alta calidad para hogares, 
-conjuntos residenciales, oficinas, locales comerciales y empresas,
- garantizando insumos eficientes, seguros y adecuados para el mantenimiento óptimo de todo tipo de espacios.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ABOUT -->
+  
     
 
     <!-- CONTACT -->
