@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | Clean & Fresh</title>
+
+   <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== GLOBAL ===== */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #1abc9c;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      color: #1abc9c;
+      font-size: 1.4rem;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 85vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      margin: 15px 0;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 60px 0;
+      background: #f7f7f7;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      padding: 60px 0;
+    }
+
+    .about-text {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .values {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      text-align: center;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      padding: 60px 0;
+      background: #f7f7f7;
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .menu {
+        gap: 10px;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- HEADER (igual al index) -->
+<header class="header">
+  <div class="container header-content">
+    <h1 class="logo">Clean & Fresh</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- CONTENIDO -->
+<section class="about" style="margin-top:100px;">
+  <div class="container">
+    <h2 class="section-title">Quiénes Somos</h2>
+
+    <p class="about-text">
+      Clean & Fresh S.A.S es una empresa comprometida con el cuidado y la limpieza de los espacios,
+      dedicada a ofrecer servicios integrales de aseo y mantenimiento con altos estándares de calidad.
+      Nos caracterizamos por la responsabilidad, el cumplimiento y la atención al detalle,
+      brindando soluciones eficientes y confiables que generan bienestar, confianza y tranquilidad.
+    </p>
+
+    <div class="values">
+      <div>✔ Personal capacitado</div>
+      <div>✔ Supervisión constante</div>
+      <div>✔ Cumplimiento legal</div>
+      <div>✔ Atención personalizada</div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Clean & Fresh S.A.S</p>
+</footer>
+
+</body>
+</html>
