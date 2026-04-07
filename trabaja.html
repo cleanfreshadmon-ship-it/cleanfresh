@@ -10,18 +10,29 @@
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
       body { font-family: 'Inter', sans-serif; }
   </style>
-  <link rel="icon" type="image/png" href="logo.PNG">
+  <link rel="icon" type="image/png" href="logo.png">
+
+<link rel="apple-touch-icon" href="logo.png">
+  
 </head>
 
 <body class="bg-slate-50">
 
-<nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto relative bg-white md:bg-transparent">
-    <a href="index" class="flex items-center gap-3">
-        <img src="logo.PNG" alt="Logo Clean & Fresh" class="h-12 w-auto object-contain">
-        <span class="text-2xl font-bold text-blue-600">CLEAN<span class="text-gray-500">FRESH</span></span>
-    </a>
-</nav>
+<nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto relative">
+    <a href="index" class="text-2xl font-bold text-blue-600">CLEAN<span class="text-gray-500">FRESH</span></a>
+    
+    <button id="menu-btn" class="md:hidden text-2xl text-slate-600 focus:outline-none">
+        <i class="fas fa-bars"></i>
+    </button>
 
+    <div id="menu" class="hidden absolute top-20 left-0 w-full bg-white shadow-xl p-8 flex-col space-y-4 md:static md:shadow-none md:p-0 md:w-auto md:flex md:flex-row md:space-y-0 md:space-x-8 font-medium z-50">
+        <a href="index" class="hover:text-blue-600 transition border-b md:border-none pb-2 md:pb-0">Inicio</a>
+        <a href="nosotros" class="hover:text-blue-600 transition border-b md:border-none pb-2 md:pb-0">Nosotros</a>
+		<a href="servicios" class="hover:text-blue-600 transition">Servicios</a>
+        <a href="contactanos" class="hover:text-blue-600 transition">Contacto</a>
+        <a href="https://wa.me/573150240704" class="md:hidden bg-blue-600 text-white px-6 py-3 rounded-full text-center font-bold">Cotizar Ahora</a>
+    </div>
+</nav>
 <main class="max-w-4xl mx-auto py-16 px-8">
     <div class="text-center mb-12">
         <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Únete a nuestro equipo</h1>
