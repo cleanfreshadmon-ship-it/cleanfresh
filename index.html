@@ -187,31 +187,36 @@
 </div>
 
 <script>
-    // Usamos DOMContentLoaded para asegurar que el HTML ya exista cuando corra el script
-    document.addEventListener('DOMContentLoaded', function() {
+    // Esta función se asegura de que el modal funcione sin errores
+    function configurarModal() {
         const modal = document.getElementById('modal-promocion');
         const btnCerrar = document.getElementById('btn-cerrar-modal');
 
         if (modal && btnCerrar) {
-            // Función para cerrar
-            const cerrarAhora = () => {
-                modal.style.setProperty('display', 'none', 'important');
-            };
-
-            // Evento al botón X
-            btnCerrar.addEventListener('click', function(e) {
-                e.preventDefault();
-                cerrarAhora();
+            // Acción al hacer clic en la X
+            btnCerrar.addEventListener('click', function() {
+                modal.style.display = 'none';
             });
 
-            // Evento al fondo oscuro
+            // Acción al hacer clic en el fondo oscuro
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) {
-                    cerrarAhora();
+                    modal.style.display = 'none';
                 }
             });
         }
-    });
+    }
+
+    // Lo ejecutamos de tres formas para asegurar que funcione:
+    
+    // 1. Al cargar el DOM
+    document.addEventListener('DOMContentLoaded', configurarModal);
+    
+    // 2. Al cargar toda la ventana (incluyendo imágenes)
+    window.onload = configurarModal;
+    
+    // 3. Ejecución inmediata por si acaso
+    configurarModal();
 </script>
 
 </body>
