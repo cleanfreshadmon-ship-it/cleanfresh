@@ -165,7 +165,44 @@
         menu.classList.toggle('flex');
     });
 </script>
-   
+
+	  <div id="anuncio-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-70 px-4">
+    <div class="relative bg-white rounded-2xl overflow-hidden max-w-lg w-full shadow-2xl animate-fade-in">
+        
+        <button id="cerrar-anuncio" class="absolute top-3 right-3 bg-white bg-opacity-80 text-slate-800 rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-500 hover:text-white transition z-10">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <div class="flex flex-col">
+            <img src="anuncio.jpg" alt="Aviso Importante" class="w-full h-auto">
+            
+            <div class="p-6 text-center">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">¡Aviso Importante!</h3>
+                <p class="text-slate-600 mb-6">Verifica siempre nuestros canales oficiales de pago para tu seguridad.</p>
+                <button onclick="document.getElementById('anuncio-modal').style.display='none'" class="bg-blue-600 text-white px-8 py-2 rounded-full font-bold hover:bg-blue-700 transition">
+                    Entendido
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+	  <script>
+    const modal = document.getElementById('anuncio-modal');
+    const btnCerrar = document.getElementById('cerrar-anuncio');
+
+    // Cerrar al dar clic en la X
+    btnCerrar.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Cerrar al dar clic fuera del recuadro blanco
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 </body>
 </html>
